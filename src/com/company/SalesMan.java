@@ -9,7 +9,7 @@ public class SalesMan extends Employee {
         this.setSalary();
     }
 
-    public void setSalary() {
+    private void setSalary() {
         for (int i = 0; i < experienceJob; i++) {
             salary += 100;
         }
