@@ -1,12 +1,18 @@
 package com.company;
 
-public abstract class Employee {
+public class Employee {
 
     protected String name;
     protected int experienceJob;
+    protected int salary;
 
-    public Employee(String name, int experienceJob) {
+    public Employee(String name, int experienceJob, int salary) {
         this.name = name;
         this.experienceJob = experienceJob;
+        this.salary = salary;
+    }
+
+    public int getSalary() {
+        return salary;
     }
 }

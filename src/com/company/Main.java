@@ -43,52 +43,55 @@ public class Main {
         int i = scanner.nextInt();
         switch (i) {
             case 1 -> {  // add manager with count salary
-                company.addEmployeeManager(new Manager(name[randomName], begin + (int) (Math.random() * end)));
+                company.addEmployee(manager, new Manager(name[randomName], begin + (int) (Math.random() * end)));
                 System.out.println("add Employee");
-                int averageSalaryWithNewEmployee = company.countManagerSalary();
+                int averageSalaryWithNewEmployee = company.getTotalManagerSalary();
                 System.out.println(averageSalaryWithNewEmployee);
             }
             case 2 -> {  // count salary manager
-                int countSalaryOfManager = company.countManagerSalary();
+                int countSalaryOfManager = company.getTotalManagerSalary();
                 System.out.println(countSalaryOfManager);
             }
             case 3 -> {  // delete manager with count salary
                 System.out.println("delete manager");
-                int salary = company.deleteEmployeeManager();
+                company.deleteEmployee(manager);
+                int salary = company.getTotalManagerSalary();
                 System.out.println(salary);
             }
             case 4 -> {  // add salesman with count salary
-                company.addEmployeeSalesMan(new SalesMan(name[randomName], begin + (int) (Math.random() * end)));
+                company.addEmployee(salesMan, new SalesMan(name[randomName], begin + (int) (Math.random() * end)));
                 System.out.println("add Employee");
-                int averageSalaryWithNewEmployee = company.countSalesManSalary();
+                int averageSalaryWithNewEmployee = company.getSalarySalesMen();
                 System.out.println(averageSalaryWithNewEmployee);
             }
             case 5 -> {  // count salary salesman
-                int countSalaryOfSalesMan = company.countSalesManSalary();
+                int countSalaryOfSalesMan = company.getSalarySalesMen();
                 System.out.println(countSalaryOfSalesMan);
             }
             case 6 -> {  // delete salesman with count salary
                 System.out.println("delete salesman");
-                int salary = company.deleteEmployeeSalesMan();
+                company.deleteEmployee(salesMan);
+                int salary = company.getSalarySalesMen();
                 System.out.println(salary);
             }
             case 7 -> {  // add decorator with count salary
-                company.addEmployeeDecorator(new Decorator(name[randomName], begin + (int) (Math.random() * end)));
+                company.addEmployee(decorator, new Decorator(name[randomName], begin + (int) (Math.random() * end)));
                 System.out.println("add Employee");
-                int averageSalaryWithNewEmployee = company.countDecoratorsSalary();
+                int averageSalaryWithNewEmployee = company.getSalaryDecorators();
                 System.out.println(averageSalaryWithNewEmployee);
             }
             case 8 -> {  // count salary decorator
-                int countSalaryOfDecorator = company.countDecoratorsSalary();
+                int countSalaryOfDecorator = company.getSalaryDecorators();
                 System.out.println(countSalaryOfDecorator);
             }
             case 9 -> {  // delete decorator with count salary
                 System.out.println("delete decorator");
-                int salary = company.deleteEmployeeDecorator();
+                company.deleteEmployee(decorator);
+                int salary = company.getSalaryDecorators();
                 System.out.println(salary);
             }
             case 10 -> {  // count all employee
-                int salary = company.countOfAllEmployee();
+                int salary = company.calculateTotalOrganizationSalary();
                 System.out.println(salary);
             }
             default -> System.out.println("end");

@@ -2,17 +2,14 @@ package com.company;
 
 public class SalesMan extends Employee {
 
-    private int salary = 800;
 
     public SalesMan(String name, int experienceJob) {
-        super(name, experienceJob);
-        this.setSalary();
+        super(name, experienceJob, 800);
+        this.setSalary(salary);
     }
 
-    private void setSalary() {
-        for (int i = 0; i < experienceJob; i++) {
-            salary += 100;
-        }
+    private void setSalary(int salary) {
+        this.salary = salary + (experienceJob * 100);
     }
 
     /**
