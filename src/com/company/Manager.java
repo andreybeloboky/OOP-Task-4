@@ -11,10 +11,4 @@ public class Manager extends Employee {
         this.salary = salary + (experienceJob * 100);
     }
 
-    /**
-     * @return - value salary from array with taking into account the experience job;
-     */
-    public int getSalary() {
-        return salary;
-    }
 }

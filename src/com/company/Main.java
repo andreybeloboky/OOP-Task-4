@@ -43,7 +43,7 @@ public class Main {
         int i = scanner.nextInt();
         switch (i) {
             case 1 -> {  // add manager with count salary
-                company.addEmployee(manager, new Manager(name[randomName], begin + (int) (Math.random() * end)));
+                company.addManager(new Manager(name[randomName], begin + (int) (Math.random() * end)));
                 System.out.println("add Employee");
                 int averageSalaryWithNewEmployee = company.getTotalManagerSalary();
                 System.out.println(averageSalaryWithNewEmployee);
@@ -54,12 +54,12 @@ public class Main {
             }
             case 3 -> {  // delete manager with count salary
                 System.out.println("delete manager");
-                company.deleteEmployee(manager);
+                company.deleteManager();
                 int salary = company.getTotalManagerSalary();
                 System.out.println(salary);
             }
             case 4 -> {  // add salesman with count salary
-                company.addEmployee(salesMan, new SalesMan(name[randomName], begin + (int) (Math.random() * end)));
+                company.addSalesMan(new SalesMan(name[randomName], begin + (int) (Math.random() * end)));
                 System.out.println("add Employee");
                 int averageSalaryWithNewEmployee = company.getSalarySalesMen();
                 System.out.println(averageSalaryWithNewEmployee);
@@ -70,12 +70,12 @@ public class Main {
             }
             case 6 -> {  // delete salesman with count salary
                 System.out.println("delete salesman");
-                company.deleteEmployee(salesMan);
+                company.deleteSalesMan();
                 int salary = company.getSalarySalesMen();
                 System.out.println(salary);
             }
             case 7 -> {  // add decorator with count salary
-                company.addEmployee(decorator, new Decorator(name[randomName], begin + (int) (Math.random() * end)));
+                company.addDecorator(new Decorator(name[randomName], begin + (int) (Math.random() * end)));
                 System.out.println("add Employee");
                 int averageSalaryWithNewEmployee = company.getSalaryDecorators();
                 System.out.println(averageSalaryWithNewEmployee);
@@ -86,7 +86,7 @@ public class Main {
             }
             case 9 -> {  // delete decorator with count salary
                 System.out.println("delete decorator");
-                company.deleteEmployee(decorator);
+                company.deleteDecorator();
                 int salary = company.getSalaryDecorators();
                 System.out.println(salary);
             }
