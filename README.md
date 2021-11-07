@@ -1,4 +1,4 @@
-[OOP] Company
+[GitHub] Add apps that will count average salary employee, same add or delete employees.
 Short description
 
 This task about calculate salary employees. There are three type employee: managers, decorators and salesman. In this programm you can: 
